@@ -1,14 +1,19 @@
 import "./box.component.css";
 
 function BoxComponent(props) {
-  const { title, borderColor } = props;
+  const { title, borderColor, imagePath } = props;
   return (
     <>
       <div
         className="div-box"
         style={borderColor ? { border: `1px solid ${borderColor}` } : {}}
       >
-        <h4>{title ? title : "Default Text"}</h4>
+        {/* Conditional rendering */}
+        {imagePath ? (
+          <img src="/react.svg" />
+        ) : (
+          <h4>{title ? title : "Default Text"}</h4>
+        )}
       </div>
     </>
   );

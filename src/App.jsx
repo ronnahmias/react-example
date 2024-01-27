@@ -17,7 +17,11 @@ function App() {
         <label>Sum: {label}</label>
         <BoxComponent title="Custom Title" />
         <BoxComponent borderColor="red" />
-        <BoxComponent borderColor="blue" />
+        <BoxComponent
+          borderColor="blue"
+          title="no title"
+          imagePath="/react.svg"
+        />
         <BoxComponent borderColor="#415841" title="Boxx" />
         <ButtonComponent size="1" onClick={handleClick} />
         <ButtonComponent size="5" onClick={handleClick} />
